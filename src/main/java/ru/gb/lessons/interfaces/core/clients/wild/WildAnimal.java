@@ -1,6 +1,7 @@
 package ru.gb.lessons.interfaces.core.clients.wild;
 
 import ru.gb.lessons.interfaces.core.clients.Animal;
+import ru.gb.lessons.interfaces.core.clients.Animals;
 import ru.gb.lessons.interfaces.core.clients.owners.Owner;
 import ru.gb.lessons.interfaces.core.clients.supports.Record;
 
@@ -12,7 +13,7 @@ import java.util.List;
 /**
  Абстракция дикого животного
  */
-public class WildAnimal extends Animal {
+public abstract class WildAnimal extends Animal implements Animals {
     public WildAnimal() {
     }
 

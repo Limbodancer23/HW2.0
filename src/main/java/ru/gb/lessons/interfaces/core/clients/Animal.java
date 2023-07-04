@@ -2,6 +2,8 @@ package ru.gb.lessons.interfaces.core.clients;
 
 import ru.gb.lessons.interfaces.core.clients.owners.Owner;
 import ru.gb.lessons.interfaces.core.clients.supports.Record;
+import ru.gb.lessons.interfaces.core.personal.Doctor;
+import ru.gb.lessons.interfaces.core.personal.Nurse;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -11,8 +13,9 @@ import java.util.List;
 /**
   Абстракция животного - пациента ветклиники.
  */
-public class Animal {
+public abstract class Animal{
     protected final String CLASS_NAME = "The " + getClass().getSimpleName();
+    // Поля класса отвечают за СОСТОЯНИЕ обьекта.
 
     protected int id; //идентификатор животного для хранения в БД
     protected String name; // кличка животного
@@ -32,21 +35,10 @@ public class Animal {
         this.owner = owner;
         this.records = new ArrayList<>();
     }
+    // Методы класса отвечают за ПОВЕДЕНИЕ обьекта
 
     protected void addRecord(Record record) {
         //todo реализовать
-    }
-
-    public void fly() {
-        System.out.println(CLASS_NAME + " flying.");
-    }
-
-    public void swim() {
-        System.out.println(CLASS_NAME + " swims.");
-    }
-
-    public void run() {
-        System.out.println(CLASS_NAME + " is moving.");
     }
 
     //todo ПО ПРАВИЛАМ "ЧИСТОГО КОДА", МЕТОДЫ, ВЫЗЫВАЕМЫЕ ВНУТРИ ДРУГОГО МЕТОДА,
@@ -127,7 +119,17 @@ public class Animal {
 
     @Override
     public String toString() {
-        //todo Грамотно переделать этот метод!
-        return super.toString();
+        return CLASS_NAME + "{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", numberOfLimbs=" + numberOfLimbs +
+                ", registrationDate=" + registrationDate +
+                ", owner=" + owner +
+                ", records=" + records +
+                '}';
+    }
+
+    public String getCLASS_NAME(){
+        return this.CLASS_NAME;
     }
 }
