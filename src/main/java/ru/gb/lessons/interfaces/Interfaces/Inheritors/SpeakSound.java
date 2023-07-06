@@ -5,5 +5,6 @@ public interface SpeakSound extends Soundable {
     String sound = "with words";
 
     @Override
-    int sound();
+    void sound();
+
 }

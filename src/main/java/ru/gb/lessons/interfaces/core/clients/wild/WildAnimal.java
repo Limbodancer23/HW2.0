@@ -1,5 +1,6 @@
 package ru.gb.lessons.interfaces.core.clients.wild;
 
+import ru.gb.lessons.interfaces.Interfaces.Inheritors.WildSound;
 import ru.gb.lessons.interfaces.core.clients.Animal;
 import ru.gb.lessons.interfaces.core.clients.Animals;
 import ru.gb.lessons.interfaces.core.clients.owners.Owner;
@@ -13,7 +14,7 @@ import java.util.List;
 /**
  Абстракция дикого животного
  */
-public abstract class WildAnimal extends Animal implements Animals {
+public abstract class WildAnimal extends Animal implements Animals{
     public WildAnimal() {
     }
 

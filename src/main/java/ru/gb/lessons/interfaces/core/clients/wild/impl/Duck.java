@@ -4,15 +4,19 @@ import ru.gb.lessons.interfaces.Interfaces.Flyable;
 import ru.gb.lessons.interfaces.Interfaces.Inheritors.FlySlow;
 import ru.gb.lessons.interfaces.Interfaces.Inheritors.RunSlow;
 import ru.gb.lessons.interfaces.Interfaces.Inheritors.SwimSlow;
-import ru.gb.lessons.interfaces.Interfaces.Runnable;
+import ru.gb.lessons.interfaces.Interfaces.Soundable;
+import ru.gb.lessons.interfaces.Interfaces.Swimable;
 import ru.gb.lessons.interfaces.core.clients.owners.Owner;
 import ru.gb.lessons.interfaces.core.clients.wild.WildAnimal;
 
 import java.time.LocalDate;
 
-public class Duck extends WildAnimal implements FlySlow, RunSlow, SwimSlow {
+public class Duck extends WildAnimal implements Flyable, Runnable, Swimable, Soundable {
     public Duck(int id, int numberOfLimbs, LocalDate registrationDate, Owner owner) {
         super(id, numberOfLimbs, registrationDate, owner);
+    }
+    public Duck(){
+
     }
 
     @Override
@@ -28,5 +32,11 @@ public class Duck extends WildAnimal implements FlySlow, RunSlow, SwimSlow {
     @Override
     public void swim() {
         System.out.println(CLASS_NAME + "can swim with " + SwimSlow.speed);
+    }
+
+
+    @Override
+    public void sound() {
+        System.out.println("CRYA, CRYA!");
     }
 }

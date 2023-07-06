@@ -1,8 +1,12 @@
 package ru.gb.lessons.interfaces.core.clients;
 
+import ru.gb.lessons.interfaces.Interfaces.Inheritors.WildSound;
+
 /**
  * МАРКИРОВОЧНЫЙ ИНТЕРФЕЙС
  */
-public interface Animals {
+public abstract interface Animals{
     String getCLASS_NAME();
+
+
 }
