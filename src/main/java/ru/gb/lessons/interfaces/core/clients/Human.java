@@ -5,7 +5,7 @@ import ru.gb.lessons.interfaces.Interfaces.Inheritors.SpeakSound;
 /**
  Абстракция человека
  */
-public class Human extends Animal implements SpeakSound { // todo на семинаре, в учебных целях, сделать extends Animal
+public class Human extends Animal implements SpeakSound {
     private final String fullName;
 
     public Human(String fullName) {
